@@ -56,7 +56,7 @@ This notebook presents an end-to-end housing price prediction pipeline, combinin
 
 ## Repository Structure
 
-KAGGLE_HOUSING/
+HOUSING PRICE PREDICTOR/
 ├── archive/ # Raw exploratory notebook (dev log)
 │ └── raw_notebook.ipynb
 ├── catboost_info/ # CatBoost metadata (auto-generated)
@@ -70,33 +70,3 @@ KAGGLE_HOUSING/
 └── README.md # Project overview (this file)
 
 ---
-
-## How to Run
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/housing-price-predictor.git
-cd housing-price-predictor
-2. Install dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-3. Run the notebook
-Open final_model_pipeline.ipynb in Jupyter or VS Code and run all cells top to bottom.
-Make sure data/dataset.csv is available in the correct path.
-
-yaml
-Copy
-Edit
-
----
-
-## ✅ Don’t forget to close code blocks!
-
-Each code section must start and end with triple backticks (` ``` `), like:
-
-````markdown
-```bash
-pip install -r requirements.txt
-Explore advanced architectures like TabNet or transformers for tabular data
