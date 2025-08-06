@@ -69,10 +69,6 @@ KAGGLE_HOUSING/
 ├── requirements.txt # Python dependencies
 └── README.md # Project overview (this file)
 
-yaml
-Copy
-Edit
-
 ---
 
 ## How to Run
@@ -90,11 +86,17 @@ pip install -r requirements.txt
 Open final_model_pipeline.ipynb in Jupyter or VS Code and run all cells top to bottom.
 Make sure data/dataset.csv is available in the correct path.
 
-Future Work
-Incorporate geospatial clustering (e.g., zip code, lat/lon embeddings)
+yaml
+Copy
+Edit
 
-Integrate external data (school ratings, crime indices, economic indicators)
+---
 
-Deploy as an interactive Streamlit or Flask web app for real-time use
+## ✅ Don’t forget to close code blocks!
 
+Each code section must start and end with triple backticks (` ``` `), like:
+
+````markdown
+```bash
+pip install -r requirements.txt
 Explore advanced architectures like TabNet or transformers for tabular data
