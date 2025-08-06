@@ -1,85 +1,92 @@
-🏠 Housing Price Prediction with Machine Learning
-TL;DR
-This project builds a high-performance housing price prediction model using XGBoost and a custom-engineered feature set on a 200K-row Kaggle dataset.
-Key contributions include a novel luxury_score, interpretable SHAP analysis, residual diagnostics, and baseline model comparisons.
-The final model achieves RMSE ≈ $94,000 and R² ≈ 0.94.
+# 🏠 Housing Price Prediction with Machine Learning
 
-Project Overview
+## TL;DR  
+This project builds a high-performance housing price prediction model using XGBoost and a custom-engineered feature set on a 200K-row Kaggle dataset.  
+Key contributions include a novel `luxury_score`, interpretable SHAP analysis, residual diagnostics, and baseline model comparisons.  
+The final model achieves **RMSE ≈ $94,000** and **R² ≈ 0.94**.
+
+---
+
+## Project Overview  
 This notebook presents an end-to-end housing price prediction pipeline, combining feature-rich structured data with domain-informed engineering. The goal is to capture both standard and luxury housing trends while ensuring interpretability and reproducibility.
 
-The approach includes:
+### The approach includes:
+- Feature design rooted in real-world housing signals  
+- Model calibration and uncertainty analysis  
+- Visual diagnostics and SHAP explanations
 
-Feature design rooted in real-world housing signals
+---
 
-Model calibration and uncertainty analysis
+## Key Contributions
 
-Visual diagnostics and SHAP explanations
+### Feature Engineering
+- Introduced `luxury_score`: a composite metric capturing home size, finish quality, and bath count  
+- Defined `is_luxury` and `luxury_x_*` interaction features to help model high-end pricing behavior  
+- Applied log transformations and interaction terms  
+- Handled missing data systematically
 
-Key Contributions
-Feature Engineering
-Introduced luxury_score: a composite metric capturing home size, finish quality, and bath count
+### Modeling and Evaluation
+- Trained and compared XGBoost, LightGBM, CatBoost, and Random Forest  
+- Tuned XGBoost hyperparameters using `RandomizedSearchCV`  
+- Evaluated performance with RMSE, R², and residual plots
 
-Defined is_luxury and luxury_x_* interaction features to help model high-end pricing behavior
+### Explainability and Diagnostics
+- Applied SHAP to quantify feature impact and direction  
+- Visualized prediction errors and residual variance  
+- Included full model training diagnostics and baseline comparisons
 
-Applied log transformations and interaction terms
+---
 
-Handled missing data systematically
+## Technical Stack  
+- Python, Pandas, NumPy, scikit-learn  
+- XGBoost, LightGBM, CatBoost  
+- SHAP, Matplotlib, Seaborn
 
-Modeling and Evaluation
-Trained and compared XGBoost, LightGBM, CatBoost, and Random Forest
+---
 
-Tuned XGBoost hyperparameters using RandomizedSearchCV
+## Final Model Performance
 
-Evaluated performance with RMSE, R², and residual plots
+| Metric        | Value       |
+|---------------|-------------|
+| RMSE          | ~$94,000    |
+| R² Score      | ~0.94       |
+| Dataset Size  | ~200,000 rows |
 
-Explainability and Diagnostics
-Applied SHAP to quantify feature impact and direction
+---
 
-Visualized prediction errors and residual variance
+## Repository Structure
 
-Included full model training diagnostics and baseline comparisons
-
-Technical Stack
-Python, Pandas, NumPy, scikit-learn
-
-XGBoost, LightGBM, CatBoost
-
-SHAP, Matplotlib, Seaborn
-
-Final Model Performance
-Metric	Value
-RMSE	~$94,000
-R² Score	~0.94
-Dataset Size	~200,000 rows
-
-Repository Structure
-bash
-Copy code
 KAGGLE_HOUSING/
-├── archive/                  # Raw exploratory notebook (dev log)
-│   └── raw_notebook.ipynb
-├── catboost_info/           # CatBoost metadata (auto-generated)
-├── data/                    # Dataset (not included in repo)
-│   └── dataset.csv
-├── models/                  # Saved model artifact
-│   └── final_xgb_model.pkl
-├── final_model_pipeline.ipynb  # Cleaned production notebook
+├── archive/ # Raw exploratory notebook (dev log)
+│ └── raw_notebook.ipynb
+├── catboost_info/ # CatBoost metadata (auto-generated)
+├── data/ # Dataset (not included in repo)
+│ └── dataset.csv
+├── models/ # Saved model artifact
+│ └── final_xgb_model.pkl
+├── final_model_pipeline.ipynb # Cleaned production notebook
 ├── submission.ipynb_gitignore # Output exclusion file
-├── requirements.txt         # Python dependencies
-└── README.md                # Project overview (this file)
-How to Run
-Clone the repository
+├── requirements.txt # Python dependencies
+└── README.md # Project overview (this file)
 
-bash
-Copy code
-git clone https://github.com/your-username/housing-price-prediction.git
-cd housing-price-prediction
-Install dependencies
+yaml
+Copy
+Edit
 
+---
+
+## How to Run
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/housing-price-predictor.git
+cd housing-price-predictor
+2. Install dependencies
 bash
-Copy code
+Copy
+Edit
 pip install -r requirements.txt
-Run the notebook
+3. Run the notebook
 Open final_model_pipeline.ipynb in Jupyter or VS Code and run all cells top to bottom.
 Make sure data/dataset.csv is available in the correct path.
 
