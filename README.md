@@ -56,17 +56,19 @@ This notebook presents an end-to-end housing price prediction pipeline, combinin
 
 ## Repository Structure
 
-HOUSING PRICE PREDICTOR/
-├── archive/ # Raw exploratory notebook (dev log)
-│ └── raw_notebook.ipynb
-├── catboost_info/ # CatBoost metadata (auto-generated)
-├── data/ # Dataset (not included in repo)
-│ └── dataset.csv
-├── models/ # Saved model artifact
-│ └── final_xgb_model.pkl
+```
+HOUSING_PRICE_PREDICTOR/
+├── archive/                    # Raw exploratory notebook (dev log)
+│   └── raw_notebook.ipynb
+├── catboost_info/             # CatBoost metadata (auto-generated)
+├── data/                      # Dataset (not included in repo)
+│   └── dataset.csv
+├── models/                    # Saved model artifact
+│   └── final_xgb_model.pkl
 ├── final_model_pipeline.ipynb # Cleaned production notebook
 ├── submission.ipynb_gitignore # Output exclusion file
-├── requirements.txt # Python dependencies
-└── README.md # Project overview (this file)
+├── requirements.txt           # Python dependencies
+└── README.md                  # Project overview (this file)
+```
 
 ---
